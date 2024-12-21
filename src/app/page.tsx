@@ -1,11 +1,15 @@
 import Header from "@/components/Header";
 import Drag from "@/components/Drag";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className='h-[5000px]'>
+    <main className='h-[1000px]'>
         <Header/>
         <Drag/>
-    </div>
+        <Experience/>
+        <Footer/>
+    </main>
   );
 }

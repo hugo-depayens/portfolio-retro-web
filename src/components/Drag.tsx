@@ -116,7 +116,7 @@ function ThreeScene() {
     }, []);
 
     return (
-        <div className="w-full flex justify-center gap-5 h-auto -mt-20 p-10 items-center bg-indigo-900">
+        <div className="w-full flex justify-center gap-5 h-auto p-10 items-center bg-indigo-900">
             <div id="three-container" className={`w-5/12 h-[${height}] overflow-hidden relative rounded-3xl shadow-2xl`} ref={block3d}>
 
             </div>
@@ -145,11 +145,9 @@ export default function Drag() {
                 <title>3D Scene</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
-            <main className="flex flex-col items-center justify-center w-full h-screen bg-black">
-                <div className="relative w-full h-[80vh]">
-                    <ThreeScene/>
-                </div>
-            </main>
+            <div className="flex flex-col items-center justify-center w-full h-auto bg-black">
+                <ThreeScene/>
+            </div>
         </>
     );
 }
