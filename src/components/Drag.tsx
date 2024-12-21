@@ -116,15 +116,15 @@ function ThreeScene() {
     }, []);
 
     return (
-        <div className="w-full flex justify-center gap-5 h-64 items-center">
-            <div id="three-container" className={`w-5/12 h-[${height}] overflow-hidden relative rounded-3xl`} ref={block3d}>
+        <div className="w-full flex justify-center gap-5 h-auto -mt-20 p-10 items-center bg-indigo-900">
+            <div id="three-container" className={`w-5/12 h-[${height}] overflow-hidden relative rounded-3xl shadow-2xl`} ref={block3d}>
 
             </div>
             <div className="w-6/12 text-white px-6">
                 <h1 className="text-3xl font-bold mb-4">
                     Добро пожаловать в мою цифровую вселенную!
                 </h1>
-                <div className="p-2 bg-red-500 rounded-2xl bg-gradient-to-bl from-black to-indigo-700">
+                <div className="p-2 bg-red-500 rounded-2xl bg-gradient-to-bl from-black to-indigo-700 shadow-2xl">
                     <p className="text leading-7 bg-gradient-to-bl from-neutral-950 to-indigo-600 text-white p-4 rounded-2xl">
                         Здесь рождаются идеи и воплощаются самые смелые проекты. Это место, где код встречается с
                         креативом,
