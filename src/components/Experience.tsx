@@ -7,8 +7,7 @@ function Experience() {
             <div className="m-4 p-4 rounded-2xl font-black text-3xl text-end bg-blue-700 w-fit">
                 Experience
             </div>
-            <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-                {/* Блок с миниблоками */}
+            <div className="w-full mx-auto grid grid-cols-1 items-center md:grid-cols-3 gap-6 px-4">
                 <div className="grid grid-cols-2 gap-4">
                     <div
                         className="bg-gradient-to-bl from-violet-800 to-cyan-800 relative  aspect-square rounded-lg shadow-lg p-4 group overflow-hidden">
@@ -44,11 +43,11 @@ function Experience() {
 
                 {/* Блок с графиком из GitHub */}
                 <div
-                    className="relative h-fit flex justify-center bg-neutral-800 col-span-2 rounded-lg shadow-lg p-6 group overflow-hidden">
+                    className="relative h-fit flex justify-center col-span-2 rounded-lg shadow-lg p-4 group overflow-hidden">
                     <div
-                        className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-800 opacity-0 group-hover:opacity-95 transition duration-500"></div>
+                        className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-800 opacity-0 group-hover:opacity-30 transition duration-500"></div>
                     <div className="z-10 font-black relative">
-                        <h3 className="text-2xl font-bold text-white mb-4">GitHub</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
                         <div className='font-sans'>
                             <GitHubCalendar username="Zoha2400"/>
                         </div>
