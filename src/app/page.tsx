@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
-import AboutMe from "@/components/AboutMe";
+import Drag from "@/components/Drag";
 
 export default function Home() {
   return (
     <div className='h-[5000px]'>
         <Header/>
-        <AboutMe/>
+        <Drag/>
     </div>
   );
 }

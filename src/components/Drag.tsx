@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef} from 'react';
 import * as THREE from 'three';
 // @ts-ignore
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -9,13 +9,18 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Head from 'next/head';
 
 function ThreeScene() {
+    const block3d = useRef(null)
+    const height = window.innerWidth / 24 * 5
+
     useEffect(() => {
+
+
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color('black');
+        scene.background = new THREE.Color('#1a1a1a');
 
         const camera = new THREE.PerspectiveCamera(
-            80,
-            600 / 300,
+            60,
+            2,
             0.1,
             1000
         );
@@ -23,7 +28,7 @@ function ThreeScene() {
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(800, 400);
+        renderer.setSize((window.innerWidth/12*5), (window.innerWidth/12*5)/2);
         const mountNode = document.getElementById('three-container');
         if (mountNode) mountNode.appendChild(renderer.domElement);
 
@@ -112,12 +117,14 @@ function ThreeScene() {
 
     return (
         <div className="w-full flex justify-center h-64 items-center">
-            <div id="three-container" className="w-5/12 h-[300px]"/>
+            <div id="three-container" className={`w-5/12 h-[${height}] overflow-hidden relative rounded-3xl`} ref={block3d}>
+
+            </div>
             <div className="w-6/12 text-white px-6">
-                <h1 className="text-4xl font-bold mb-4">
+                <h1 className="text-3xl font-bold mb-4">
                     Добро пожаловать в мою цифровую вселенную!
                 </h1>
-                <p className="text-lg leading-7">
+                <p className="text leading-7">
                     Здесь рождаются идеи и воплощаются самые смелые проекты. Это место, где код встречается с креативом,
                     а технологии становятся инструментом искусства.
                     Зайди, вдохновись и узнай, как из строчек кода создаются невероятные миры.
@@ -128,7 +135,7 @@ function ThreeScene() {
     );
 }
 
-export default function AboutPage() {
+export default function Drag() {
     return (
         <>
             <Head>
